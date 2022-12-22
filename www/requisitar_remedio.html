@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Requisitar Remédios</title>
+</head>
+<body>
+    <div id="div_medicamento" class="p-3">
+        <p class="form-floating">
+            <input type="text" id="nome_medico" class="form-control">
+            <label for="nome_medico">Nome do médico</label>
+        </p>
+        <p>
+            <label for="medicamento">Escolha o remédio</label>
+            <select id="medicamento" class="form-select mb-3">
+                <option value="Paracetamol">Paracetamol</option>
+                <option value="Saxenda">Saxenda</option>
+                <option value="Mesilato">Mesilato</option>
+                <option value="Riluzol">Riluzol</option>
+            </select>    
+        </p>
+        <p  class="form-floating">
+            <input type="date" id="data_requisicao" class="form-control">
+            <label for="data_requisicao">Data para requisição</label>
+        </p>
+        <p class="d-grid">
+            <button id="botao_pedido" class="btn btn-primary btn-lg">Efetuar pedido</button>
+        </p>
+        <div class="container" id="divBotoes" hidden>
+            <div class="row">
+                <div class="col d-grid btn btn-primary btn-lg" id="botaoNova_requisicao">
+                    Atualizar
+                </div>
+                <div class="col d-grid btn btn-danger btn-lg offset-1" id="botaoCancelar_requisicao">
+                    Cancelar consulta
+                </div>
+            </div>
+        </div>     
+        <p>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome do Médico</th>
+                    <th scope="col">Medicamento</th>      
+                    <th scope="col">Data Requisição</th>
+                  </tr>
+                </thead>
+                <tbody id="resultado_requisicao"></tbody>
+            </table>
+        </p>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/localdb.min.js"></script>
+    <script src="js/requisitar.js"></script>
+</body>
+</html>
